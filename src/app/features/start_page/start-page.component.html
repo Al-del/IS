@@ -15,17 +15,16 @@
     <div class="nav-logo">
       <div class="logo-icon">
         <svg viewBox="0 0 40 40" fill="none">
-          <circle cx="20" cy="20" r="18" stroke="url(#g1)" stroke-width="1.5"/>
-          <path d="M20 8 L14 22 H20 L14 32 L28 18 H21 L26 8Z"
-                fill="url(#g2)" stroke="none"/>
+          <circle cx="20" cy="20" r="18" stroke="url(#g1)" stroke-width="1.5" />
+          <path d="M20 8 L14 22 H20 L14 32 L28 18 H21 L26 8Z" fill="url(#g2)" stroke="none" />
           <defs>
             <linearGradient id="g1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#A0D585"/>
-              <stop offset="100%" stop-color="#EEFABD"/>
+              <stop offset="0%" stop-color="#A0D585" />
+              <stop offset="100%" stop-color="#EEFABD" />
             </linearGradient>
             <linearGradient id="g2" x1="14" y1="8" x2="28" y2="32" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#EEFABD"/>
-              <stop offset="100%" stop-color="#A0D585"/>
+              <stop offset="0%" stop-color="#EEFABD" />
+              <stop offset="100%" stop-color="#A0D585" />
             </linearGradient>
           </defs>
         </svg>
@@ -36,13 +35,12 @@
     <ul class="nav-links">
       <li><a href="#" class="nav-link active">Home</a></li>
       <li><a href="#" class="nav-link">Community</a></li>
-      <li><a href="#" class="nav-link">My Locker</a></li>
-      <li><a href="#" class="nav-link">Rewards</a></li>
+      <li><a href="#" class="nav-link">About Us</a></li>
       <li><a href="#" class="nav-link">AI Guide</a></li>
+      <li><a href="#" class="nav-link">FAQ</a></li>
     </ul>
 
     <div class="nav-actions">
-      <button class="btn-ghost">Sign In</button>
       <button class="btn-primary">Join Free</button>
     </div>
 
@@ -72,11 +70,12 @@
       </p>
 
       <div class="hero-cta">
-        <button class="btn-hero" [class.active]="heroActive" (click)="onHeroClick()">Start earning energy points</button>
+        <button class="btn-hero" [class.active]="heroActive" (click)="onHeroClick()">Start earning energy
+          points</button>
         <button class="btn-outline">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 8l6 4-6 4V8z" fill="currentColor"/>
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+            <path d="M10 8l6 4-6 4V8z" fill="currentColor" />
           </svg>
           Watch how it works
         </button>
@@ -105,23 +104,25 @@
       <div class="energy-ring-wrap">
         <div class="energy-ring ring-outer">
           <div class="ring-tick" *ngFor="let t of ticks; let i = index"
-               [style.transform]="'rotate(' + (i * 24) + 'deg)'">
+            [style.transform]="'rotate(' + (i * 24) + 'deg)'">
           </div>
         </div>
         <div class="energy-ring ring-mid"></div>
         <div class="energy-core">
           <div class="core-bolt">
             <svg viewBox="0 0 60 80" fill="none">
-              <path d="M36 4 L16 42 H30 L18 76 L52 32 H36 L46 4Z"
-                    fill="url(#bolt-grad)" filter="url(#glow)"/>
+              <path d="M36 4 L16 42 H30 L18 76 L52 32 H36 L46 4Z" fill="url(#bolt-grad)" filter="url(#glow)" />
               <defs>
                 <linearGradient id="bolt-grad" x1="16" y1="4" x2="52" y2="76" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#EEFABD"/>
-                  <stop offset="100%" stop-color="#A0D585"/>
+                  <stop offset="0%" stop-color="#EEFABD" />
+                  <stop offset="100%" stop-color="#A0D585" />
                 </linearGradient>
                 <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-                  <feGaussianBlur stdDeviation="4" result="blur"/>
-                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
                 </filter>
               </defs>
             </svg>
@@ -176,18 +177,21 @@
         <div class="feat-glow"></div>
         <div class="feat-icon-wrap">
           <svg viewBox="0 0 56 56" fill="none">
-            <circle cx="28" cy="28" r="26" stroke="url(#fc1)" stroke-width="1"/>
-            <path d="M28 14 C20 14 14 19 14 26 C14 33 20 36 28 36 C36 36 42 33 42 28 C42 23 38 20 34 20 C30 20 26 23 26 28 C26 31 28 32 28 32"
-                  stroke="url(#fc1)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <circle cx="28" cy="28" r="26" stroke="url(#fc1)" stroke-width="1" />
+            <path
+              d="M28 14 C20 14 14 19 14 26 C14 33 20 36 28 36 C36 36 42 33 42 28 C42 23 38 20 34 20 C30 20 26 23 26 28 C26 31 28 32 28 32"
+              stroke="url(#fc1)" stroke-width="2.5" stroke-linecap="round" fill="none" />
             <defs>
               <linearGradient id="fc1" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A0D585"/><stop offset="1" stop-color="#EEFABD"/>
+                <stop stop-color="#A0D585" />
+                <stop offset="1" stop-color="#EEFABD" />
               </linearGradient>
             </defs>
           </svg>
         </div>
         <h3>Smart Coils</h3>
-        <p>City-installed energy coils harvest kinetic and ambient energy. Walk past one — earn points. Install one — earn more.</p>
+        <p>City-installed energy coils harvest kinetic and ambient energy. Walk past one — earn points. Install one —
+          earn more.</p>
         <div class="feat-tag">+pts per kWh</div>
       </div>
 
@@ -195,12 +199,13 @@
         <div class="feat-glow"></div>
         <div class="feat-icon-wrap">
           <svg viewBox="0 0 56 56" fill="none">
-            <rect x="12" y="20" width="32" height="24" rx="4" stroke="url(#fc2)" stroke-width="1.5"/>
-            <path d="M22 20 V16 A6 6 0 0 1 34 16 V20" stroke="url(#fc2)" stroke-width="1.5" fill="none"/>
-            <circle cx="28" cy="32" r="4" fill="url(#fc2)"/>
+            <rect x="12" y="20" width="32" height="24" rx="4" stroke="url(#fc2)" stroke-width="1.5" />
+            <path d="M22 20 V16 A6 6 0 0 1 34 16 V20" stroke="url(#fc2)" stroke-width="1.5" fill="none" />
+            <circle cx="28" cy="32" r="4" fill="url(#fc2)" />
             <defs>
               <linearGradient id="fc2" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EEFABD"/><stop offset="1" stop-color="#6984A9"/>
+                <stop stop-color="#EEFABD" />
+                <stop offset="1" stop-color="#6984A9" />
               </linearGradient>
             </defs>
           </svg>
@@ -214,19 +219,22 @@
         <div class="feat-glow"></div>
         <div class="feat-icon-wrap">
           <svg viewBox="0 0 56 56" fill="none">
-            <circle cx="28" cy="28" r="18" stroke="url(#fc3)" stroke-width="1.5"/>
-            <circle cx="28" cy="28" r="10" stroke="url(#fc3)" stroke-width="1.5"/>
-            <circle cx="28" cy="28" r="4" fill="url(#fc3)"/>
-            <path d="M28 10 V6 M28 50 V46 M10 28 H6 M50 28 H46" stroke="url(#fc3)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="28" cy="28" r="18" stroke="url(#fc3)" stroke-width="1.5" />
+            <circle cx="28" cy="28" r="10" stroke="url(#fc3)" stroke-width="1.5" />
+            <circle cx="28" cy="28" r="4" fill="url(#fc3)" />
+            <path d="M28 10 V6 M28 50 V46 M10 28 H6 M50 28 H46" stroke="url(#fc3)" stroke-width="1.5"
+              stroke-linecap="round" />
             <defs>
               <linearGradient id="fc3" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#6984A9"/><stop offset="1" stop-color="#A0D585"/>
+                <stop stop-color="#6984A9" />
+                <stop offset="1" stop-color="#A0D585" />
               </linearGradient>
             </defs>
           </svg>
         </div>
         <h3>Goals & Milestones</h3>
-        <p>Set personal energy targets. Track collective city goals. Celebrate wins that actually move the needle on climate.</p>
+        <p>Set personal energy targets. Track collective city goals. Celebrate wins that actually move the needle on
+          climate.</p>
         <div class="feat-tag feat-tag-purple">Streak rewards</div>
       </div>
 
@@ -234,20 +242,22 @@
         <div class="feat-glow"></div>
         <div class="feat-icon-wrap">
           <svg viewBox="0 0 56 56" fill="none">
-            <rect x="14" y="16" width="28" height="20" rx="6" stroke="url(#fc4)" stroke-width="1.5"/>
-            <circle cx="22" cy="26" r="2.5" fill="url(#fc4)"/>
-            <circle cx="34" cy="26" r="2.5" fill="url(#fc4)"/>
-            <path d="M22 36 V42 M34 36 V42 M18 42 H38" stroke="url(#fc4)" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M24 22 H32" stroke="url(#fc4)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <rect x="14" y="16" width="28" height="20" rx="6" stroke="url(#fc4)" stroke-width="1.5" />
+            <circle cx="22" cy="26" r="2.5" fill="url(#fc4)" />
+            <circle cx="34" cy="26" r="2.5" fill="url(#fc4)" />
+            <path d="M22 36 V42 M34 36 V42 M18 42 H38" stroke="url(#fc4)" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M24 22 H32" stroke="url(#fc4)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
             <defs>
               <linearGradient id="fc4" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EEFABD"/><stop offset="1" stop-color="#A0D585"/>
+                <stop stop-color="#EEFABD" />
+                <stop offset="1" stop-color="#A0D585" />
               </linearGradient>
             </defs>
           </svg>
         </div>
         <h3>Behavioral AI</h3>
-        <p>Your personal AI coach learns your routines, nudges you away from waste habits, and celebrates every green choice.</p>
+        <p>Your personal AI coach learns your routines, nudges you away from waste habits, and celebrates every green
+          choice.</p>
         <div class="feat-tag feat-tag-red">Always learning</div>
       </div>
 
@@ -258,7 +268,9 @@
   <section class="ai-section">
     <div class="ai-left">
       <div class="section-label">AI COMPANION</div>
-      <h2 class="section-title">Meet <span>Volt</span>, your<br>habit coach</h2>
+      <h2 class="section-title">Meet <i style="background: linear-gradient(90deg,rgba(195, 228, 166, 1) 0%, rgb(199, 225, 191) 100%);
+      background-clip: text;
+      color: transparent;">Volt</i>, your<br>habit coach</h2>
       <p class="ai-desc">
         Volt analyzes your daily patterns — commute, appliance use, purchase habits —
         and gently guides you toward greener choices. Not guilt. Just momentum.
@@ -289,11 +301,12 @@
         <div class="chat-header">
           <div class="chat-avatar">
             <svg viewBox="0 0 36 36" fill="none" width="24" height="24">
-              <circle cx="18" cy="18" r="16" fill="url(#av1)"/>
-              <path d="M18 10 L13 20 H18 L13 26 L24 16 H18 L22 10Z" fill="white"/>
+              <circle cx="18" cy="18" r="16" fill="url(#av1)" />
+              <path d="M18 10 L13 20 H18 L13 26 L24 16 H18 L22 10Z" fill="white" />
               <defs>
                 <linearGradient id="av1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#A0D585"/><stop offset="1" stop-color="#EEFABD"/>
+                  <stop stop-color="#A0D585" />
+                  <stop offset="1" stop-color="#EEFABD" />
                 </linearGradient>
               </defs>
             </svg>
@@ -326,11 +339,11 @@
         </div>
 
         <div class="chat-input-row">
-          <input type="text" placeholder="Ask Volt anything…" readonly/>
+          <input type="text" placeholder="Ask Volt anything…" readonly />
           <button class="chat-send">
             <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
-              <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"
-                    stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
             </svg>
           </button>
         </div>
@@ -366,11 +379,12 @@
         <div class="nav-logo">
           <div class="logo-icon">
             <svg viewBox="0 0 40 40" fill="none" width="32">
-              <circle cx="20" cy="20" r="18" stroke="url(#gf1)" stroke-width="1.5"/>
-              <path d="M20 8 L14 22 H20 L14 32 L28 18 H21 L26 8Z" fill="url(#gf1)"/>
+              <circle cx="20" cy="20" r="18" stroke="url(#gf1)" stroke-width="1.5" />
+              <path d="M20 8 L14 22 H20 L14 32 L28 18 H21 L26 8Z" fill="url(#gf1)" />
               <defs>
                 <linearGradient id="gf1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#A0D585"/><stop offset="1" stop-color="#EEFABD"/>
+                  <stop stop-color="#A0D585" />
+                  <stop offset="1" stop-color="#EEFABD" />
                 </linearGradient>
               </defs>
             </svg>
@@ -391,21 +405,16 @@
           <h4>Community</h4>
           <a href="#">Leaderboard</a>
           <a href="#">City goals</a>
-          <a href="#">Forum</a>
           <a href="#">Events</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="#">About</a>
-          <a href="#">Careers</a>
-          <a href="#">Press</a>
           <a href="#">Contact</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 VoltLoop Inc. All rights reserved.</span>
-      <span>Made with 💚 for the planet</span>
     </div>
   </footer>
 
