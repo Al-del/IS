@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-interface LeaderboardUser {
+interface LeaderboardCity {
   initials: string;
   name: string;
-  city: string;
+  country: string;
   pts: number;
   pct: number;
   color: string;
@@ -24,12 +24,13 @@ export class StartPageComponent implements OnInit {
   /** Ring tick marks (15 ticks × 24° = 360°) */
   ticks: number[] = Array.from({ length: 15 });
 
-  leaderboard: LeaderboardUser[] = [
-    { initials: 'MR', name: 'Mia Rosen', city: 'Berlin', pts: 12840, pct: 100, color: 'linear-gradient(135deg,#A0D585,#EEFABD)' },
-    { initials: 'JK', name: 'Jonas Keller', city: 'Amsterdam', pts: 11200, pct: 87, color: 'linear-gradient(135deg,#EEFABD,#6984A9)' },
-    { initials: 'SL', name: 'Sofia Lima', city: 'Lisbon', pts: 9750, pct: 76, color: 'linear-gradient(135deg,#6984A9,#A0D585)' },
-    { initials: 'AT', name: 'Aiko Tanaka', city: 'Tokyo', pts: 8930, pct: 70, color: 'linear-gradient(135deg,#263B6A,#6984A9)' },
-    { initials: 'CN', name: 'Carlos Neves', city: 'Porto', pts: 7680, pct: 60, color: 'linear-gradient(135deg,#A0D585,#263B6A)' },
+  leaderboard: LeaderboardCity[] = [
+    { initials: 'TOK', name: 'Tokyo', country: 'Japan', pts: 13840, pct: 100, color: 'linear-gradient(135deg,#43bbf7,#7accf5)' },
+    { initials: 'TOK', name: 'Istanbul', country: 'Turkey', pts: 12700, pct: 100, color: 'linear-gradient(135deg,#43bbf7,#7accf5)' },
+    { initials: 'BER', name: 'Berlin', country: 'Germany', pts: 11200, pct: 87, color: 'linear-gradient(135deg,#7accf5,#263B6A)' },
+    { initials: 'NYC', name: 'New York', country: 'USA', pts: 9750, pct: 76, color: 'linear-gradient(135deg,#263B6A,#43bbf7)' },
+    { initials: 'LON', name: 'London', country: 'UK', pts: 8930, pct: 70, color: 'linear-gradient(135deg,#43bbf7,#6984A9)' },
+    { initials: 'PAR', name: 'Paris', country: 'France', pts: 7680, pct: 60, color: 'linear-gradient(135deg,#7accf5,#263B6A)' },
   ];
 
   ngOnInit(): void {

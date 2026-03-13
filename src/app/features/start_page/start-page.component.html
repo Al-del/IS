@@ -19,12 +19,12 @@
           <path d="M20 8 L14 22 H20 L14 32 L28 18 H21 L26 8Z" fill="url(#g2)" stroke="none" />
           <defs>
             <linearGradient id="g1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#A0D585" />
-              <stop offset="100%" stop-color="#EEFABD" />
+              <stop offset="0%" stop-color="#43bbf7" />
+              <stop offset="100%" stop-color="#7accf5" />
             </linearGradient>
             <linearGradient id="g2" x1="14" y1="8" x2="28" y2="32" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#EEFABD" />
-              <stop offset="100%" stop-color="#A0D585" />
+              <stop offset="0%" stop-color="#7accf5" />
+              <stop offset="100%" stop-color="#43bbf7" />
             </linearGradient>
           </defs>
         </svg>
@@ -114,8 +114,8 @@
               <path d="M36 4 L16 42 H30 L18 76 L52 32 H36 L46 4Z" fill="url(#bolt-grad)" filter="url(#glow)" />
               <defs>
                 <linearGradient id="bolt-grad" x1="16" y1="4" x2="52" y2="76" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#EEFABD" />
-                  <stop offset="100%" stop-color="#A0D585" />
+                  <stop offset="0%" stop-color="#7accf5" />
+                  <stop offset="100%" stop-color="#43bbf7" />
                 </linearGradient>
                 <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
                   <feGaussianBlur stdDeviation="4" result="blur" />
@@ -183,8 +183,8 @@
               stroke="url(#fc1)" stroke-width="2.5" stroke-linecap="round" fill="none" />
             <defs>
               <linearGradient id="fc1" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A0D585" />
-                <stop offset="1" stop-color="#EEFABD" />
+                <stop stop-color="#43bbf7" />
+                <stop offset="1" stop-color="#7accf5" />
               </linearGradient>
             </defs>
           </svg>
@@ -204,7 +204,7 @@
             <circle cx="28" cy="32" r="4" fill="url(#fc2)" />
             <defs>
               <linearGradient id="fc2" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EEFABD" />
+                <stop stop-color="#7accf5" />
                 <stop offset="1" stop-color="#6984A9" />
               </linearGradient>
             </defs>
@@ -227,7 +227,7 @@
             <defs>
               <linearGradient id="fc3" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#6984A9" />
-                <stop offset="1" stop-color="#A0D585" />
+                <stop offset="1" stop-color="#43bbf7" />
               </linearGradient>
             </defs>
           </svg>
@@ -249,8 +249,8 @@
             <path d="M24 22 H32" stroke="url(#fc4)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
             <defs>
               <linearGradient id="fc4" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EEFABD" />
-                <stop offset="1" stop-color="#A0D585" />
+                <stop stop-color="#7accf5" />
+                <stop offset="1" stop-color="#43bbf7" />
               </linearGradient>
             </defs>
           </svg>
@@ -268,7 +268,7 @@
   <section class="ai-section">
     <div class="ai-left">
       <div class="section-label">AI COMPANION</div>
-      <h2 class="section-title">Meet <i style="background: linear-gradient(90deg,rgba(195, 228, 166, 1) 0%, rgb(199, 225, 191) 100%);
+      <h2 class="section-title">Meet <i style="background: linear-gradient(90deg,#43bbf7 0%, #7accf5 100%);
       background-clip: text;
       color: transparent;">Volt</i>, your<br>habit coach</h2>
       <p class="ai-desc">
@@ -305,8 +305,8 @@
               <path d="M18 10 L13 20 H18 L13 26 L24 16 H18 L22 10Z" fill="white" />
               <defs>
                 <linearGradient id="av1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#A0D585" />
-                  <stop offset="1" stop-color="#EEFABD" />
+                  <stop stop-color="#43bbf7" />
+                  <stop offset="1" stop-color="#7accf5" />
                 </linearGradient>
               </defs>
             </svg>
@@ -357,16 +357,16 @@
       <div class="section-label">THIS WEEK'S TOP CONTRIBUTORS</div>
     </div>
     <div class="lb-list">
-      <div class="lb-item" *ngFor="let user of leaderboard; let i = index">
+      <div class="lb-item" *ngFor="let item of leaderboard; let i = index">
         <span class="lb-rank">{{ i + 1 }}</span>
-        <div class="lb-avatar" [style.background]="user.color">{{ user.initials }}</div>
+        <div class="lb-avatar" [style.background]="item.color">{{ item.initials }}</div>
         <div class="lb-info">
-          <span class="lb-name">{{ user.name }}</span>
-          <span class="lb-city">{{ user.city }}</span>
+          <span class="lb-name">{{ item.name }}</span>
+          <span class="lb-city">{{ item.country }}</span>
         </div>
-        <div class="lb-pts">{{ user.pts | number }} <em>pts</em></div>
+        <div class="lb-pts">{{ item.pts | number }} <em>pts</em></div>
         <div class="lb-bar-wrap">
-          <div class="lb-bar" [style.width]="user.pct + '%'"></div>
+          <div class="lb-bar" [style.width]="item.pct + '%'"></div>
         </div>
       </div>
     </div>
@@ -383,8 +383,8 @@
               <path d="M20 8 L14 22 H20 L14 32 L28 18 H21 L26 8Z" fill="url(#gf1)" />
               <defs>
                 <linearGradient id="gf1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#A0D585" />
-                  <stop offset="1" stop-color="#EEFABD" />
+                  <stop stop-color="#43bbf7" />
+                  <stop offset="1" stop-color="#7accf5" />
                 </linearGradient>
               </defs>
             </svg>
